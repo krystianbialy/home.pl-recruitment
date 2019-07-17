@@ -1,0 +1,164 @@
+/***** MEDIA QUERIES *****/
+
+/* grid */
+@media (min-width: 1149px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 40em)) 1fr;
+  }
+
+  .wrapper,
+  .c_box,
+  .f_box {
+    grid-column: 2/4;
+  }
+}
+
+/***** NAVIGATION *****/
+@media (min-width:1149px) {
+  .nav {
+    height: 150px;
+
+    .wrapper {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .logo {
+        float: left;
+        margin-top: 30px;
+        padding: 0 0;
+      }
+
+      .menu {
+        float: right;
+        margin-top: 55px;
+
+      }
+    }
+  }
+}
+
+/***** HEADER *****/
+@media (max-width:250px) {
+  .header {
+    margin-top: 170px;
+  }
+}
+
+@media (min-width:487px) {
+  .header {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width:1149px) {
+  .header {
+    margin-top: 10px;
+  }
+}
+
+/***** MAIN AREA *****/
+
+/*main-a section */
+@media (min-width:1149px) {
+  .main-a .wrapper {
+    margin-top: 20px;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0 20px;
+    }
+  }
+}
+
+@media (min-width:700px) and (max-width:1149px) {
+  .main-a ul {
+    display: grid;
+    grid-template-columns: repeat(2, 225px);
+    justify-content: center;
+    grid-gap: 0 100px;
+  }
+}
+
+/*main-b section */
+@media (max-width:338px) {
+  .main-b .box-content {
+    text-align: center;
+
+    .picture-1,
+    .picture-2 {
+      margin: 0 0;
+      float: none;
+    }
+
+    .text {
+      margin-top: 15px;
+    }
+  }
+}
+
+@media (min-width:810px) {
+  .main-b .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 30px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+
+    .big-picture {
+      height: 250px;
+    }
+  }
+
+  .main-b .box-content {
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+}
+
+/*main-c section */
+@media (min-width:810px) {
+  .c_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 30px;
+    direction: rtl;
+
+    .big-picture {
+      height: 250px;
+    }
+
+    .text {
+      text-align: left;
+    }
+  }
+}
+
+/***** FOOTER *****/
+@media (min-width:980px) {
+  .f_box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    grid-gap: 10px 60px;
+
+    .text-1 {
+      margin: 20px 0;
+    }
+  }
+}
+
+@media (min-width:600px) and (max-width:980px) {
+  .f_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    grid-gap: 10px 60px;
+
+    .text-1 {
+      margin-top: 20px;
+    }
+  }
+}
