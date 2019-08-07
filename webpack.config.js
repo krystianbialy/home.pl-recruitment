@@ -6,21 +6,29 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].[contentHash].bundle.js'
   },
   optimization: {
     minimizer: [
-      new TerserPlugin({}),
-      new OptimizeCSSAssetsPlugin({})
+      new TerserPlugin({
+        sourceMap: true
+      }),
+      new OptimizeCSSAssetsPlugin({
+        cssProcessorOptions: {
+          map: {
+            inline: true
+          }
+        }
+      })
     ],
   },
   devServer: {
     writeToDisk: true
   },
-  devtool: "source-map",
+  devtool: "inline-source-map",
   module: {
     rules: [{
         test: /\.html$/,
@@ -38,10 +46,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [{
-            loader: "style-loader",
-            options: {
-              sourceMap: true
-            }
+            loader: "style-loader"
           },
           MiniCssExtractPlugin.loader,
           {
@@ -68,6 +73,16 @@ module.exports = {
         }]
       },
       {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'font'
+          }
+        }]
+      }, 
+      {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: [{
@@ -85,7 +100,7 @@ module.exports = {
       filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: '[name].[contentHash].css'
     }),
     new CleanWebpackPlugin()
   ]

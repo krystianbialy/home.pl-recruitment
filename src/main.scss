@@ -1,7 +1,16 @@
-/***** CORE STYLES *****/
+/***** GENERAL STYLES *****/
+@font-face {
+  font-family: 'Roboto';
+  src: url('./font/RobotoCondensed-Regular.ttf') format('ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 ul {
