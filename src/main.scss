@@ -1,4 +1,4 @@
-/***** GENERAL STYLES *****/
+/* general styles */
 @font-face {
   font-family: 'Roboto';
   src: url('./font/RobotoCondensed-Regular.ttf') format('ttf');
@@ -22,8 +22,9 @@ a {
   outline: none;
 }
 
-/***** NAVIGATION *****/
-.nav {
+/* end of general styles */
+
+.navigation__box {
   height: 200px;
   text-align: center;
 
@@ -32,10 +33,10 @@ a {
   }
 }
 
-.nav-list {
+.navigation__list {
   margin: 0 10px;
 
-  li {
+  .list__item {
     display: inline-block;
     background: #C0C0C0;
     margin: 10px 10px;
@@ -48,26 +49,22 @@ a {
   }
 }
 
-/***** HEADER *****/
 .header {
   background: #C0C0C0;
   margin-top: 70px;
 
-  .slider {
+  .header__slider {
     height: 300px;
   }
 }
 
-/***** MAIN AREA *****/
-
-/* main-a section */
-.main-a .wrapper {
+.main-a__wrapper {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.main-a .box {
+.main-a__list .box {
   width: 225px;
   margin-top: 30px;
   margin-left: auto;
@@ -75,70 +72,68 @@ a {
   border: 1px solid #C0C0C0;
   text-align: center;
 
-  .box-content {
+  .box__content {
     padding: 15px 10px;
   }
 
-  .box-footer {
+  .box__footer {
     background: #C0C0C0;
     padding: 8px 10px;
   }
 }
 
-/* main-b section */
-.main-b .wrapper {
+.main-b__wrapper {
   width: 85%;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
 
-  .big-picture {
+  .big-img {
     height: 200px;
     background: #C0C0C0;
     margin-bottom: 35px;
   }
-}
 
-.main-b .box-content {
-  overflow: auto;
-  margin-top: 30px;
-
-  .picture-1,
-  .picture-2 {
-    float: left;
-    margin-right: 25px;
+  .box-wrapper {
+    overflow: auto;
+    margin-top: 30px;
   }
 }
 
-/* main-c section */
-.c_box {
+.main-b__wrapper .box__small-img {
+  float: left;
+  margin-right: 25px;
+}
+
+.main-c .box {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
 
-  .big-picture {
+  .box__img {
     height: 200px;
     background: #C0C0C0;
     margin-bottom: 25px;
   }
 }
 
-/***** FOOTER *****/
 .footer {
   background: #C0C0C0;
   margin-top: 30px;
 
-  .f_box {
+  .footer__wrapper {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
     padding: 25px 0;
 
-    .text-2,
-    .text-3,
-    .text-4 {
+    .box {
       margin-top: 20px;
+    }
+
+    .box--margin-top {
+      margin-top: 0;
     }
   }
 }
