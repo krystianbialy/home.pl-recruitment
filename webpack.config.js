@@ -81,7 +81,7 @@ module.exports = {
             outputPath: 'font'
           }
         }]
-      }, 
+      },
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
