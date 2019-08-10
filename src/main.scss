@@ -52,10 +52,10 @@ a {
 .header {
   background: #C0C0C0;
   margin-top: 70px;
+}
 
-  .header__slider {
-    height: 300px;
-  }
+.header__wrapper .slider-box {
+  height: 300px;
 }
 
 .main-a__wrapper {
@@ -94,19 +94,19 @@ a {
     background: #C0C0C0;
     margin-bottom: 35px;
   }
+}
 
-  .box-wrapper {
-    overflow: auto;
-    margin-top: 30px;
+.main-b__wrapper .box {
+  overflow: auto;
+  margin-top: 30px;
+
+  .box__small-img {
+    float: left;
+    margin-right: 25px;
   }
 }
 
-.main-b__wrapper .box__small-img {
-  float: left;
-  margin-right: 25px;
-}
-
-.main-c .box {
+.main-c__wrapper .box {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
@@ -121,19 +121,19 @@ a {
 .footer {
   background: #C0C0C0;
   margin-top: 30px;
+}
 
-  .footer__wrapper {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 25px 0;
+.footer__wrapper {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px 0;
 
-    .box {
-      margin-top: 20px;
-    }
+  .box--margin-top {
+    margin-top: 0;
+  }
 
-    .box--margin-top {
-      margin-top: 0;
-    }
+  .box {
+    margin-top: 20px;
   }
 }
