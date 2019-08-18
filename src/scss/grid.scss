@@ -1,0 +1,15 @@
+@media (min-width: 1149px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 40em)) 1fr;
+  }
+
+  .navigation__container,
+  .header__container,
+  .main-a__container,
+  .main-b__container,
+  .main-c__container,
+  .footer__container {
+    grid-column: 2/4;
+  }
+}

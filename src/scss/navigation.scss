@@ -1,0 +1,48 @@
+.navigation__box {
+  height: 200px;
+  text-align: center;
+
+  .logo {
+    padding: 20px 0;
+  }
+}
+
+.navigation__list {
+  margin: 0 10px;
+
+  .list__item {
+    display: inline-block;
+    background: #C0C0C0;
+    margin: 10px 10px;
+    padding: 6px 20px;
+    border-radius: 15px;
+
+    a {
+      color: white;
+    }
+  }
+}
+
+@media (min-width:1149px) {
+  .navigation__container {
+    height: 150px;
+  }
+
+  .navigation__box {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .logo {
+      float: left;
+      margin-top: 30px;
+      padding: 0 0;
+    }
+
+    .navigation__menu {
+      float: right;
+      margin-top: 55px;
+
+    }
+  }
+}

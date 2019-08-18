@@ -1,0 +1,26 @@
+.header {
+  background: #C0C0C0;
+  margin-top: 70px;
+}
+
+.header__container .slider-box {
+  height: 300px;
+}
+
+@media (max-width:250px) {
+  .header {
+    margin-top: 170px;
+  }
+}
+
+@media (min-width:487px) {
+  .header {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width:1149px) {
+  .header {
+    margin-top: 10px;
+  }
+}
