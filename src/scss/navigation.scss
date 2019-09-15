@@ -12,13 +12,13 @@
 
   .list__item {
     display: inline-block;
-    background: #C0C0C0;
+    background: $silver;
     margin: 10px 10px;
     padding: 6px 20px;
     border-radius: 15px;
 
     a {
-      color: white;
+      color: $white;
     }
   }
 }
